@@ -16,6 +16,8 @@
 		9821518C277B53700034267D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9821518B277B53700034267D /* Person.swift */; };
 		9821518F277B53A10034267D /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9821518E277B53A10034267D /* ContactsTableViewController.swift */; };
 		98215191277B53C00034267D /* ContactsDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98215190277B53C00034267D /* ContactsDetailsTableViewController.swift */; };
+		98215193277BC9CE0034267D /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98215192277BC9CE0034267D /* ContactsViewController.swift */; };
+		98215195277CA59A0034267D /* mainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98215194277CA59A0034267D /* mainTabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		9821518B277B53700034267D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		9821518E277B53A10034267D /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		98215190277B53C00034267D /* ContactsDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDetailsTableViewController.swift; sourceTree = "<group>"; };
+		98215192277BC9CE0034267D /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		98215194277CA59A0034267D /* mainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +79,9 @@
 		98215186277B52D80034267D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				98215194277CA59A0034267D /* mainTabBarViewController.swift */,
 				9821518E277B53A10034267D /* ContactsTableViewController.swift */,
+				98215192277BC9CE0034267D /* ContactsViewController.swift */,
 				98215190277B53C00034267D /* ContactsDetailsTableViewController.swift */,
 			);
 			path = ViewControllers;
@@ -182,8 +188,10 @@
 				9821518C277B53700034267D /* Person.swift in Sources */,
 				9821518F277B53A10034267D /* ContactsTableViewController.swift in Sources */,
 				9821518A277B53470034267D /* DataManager.swift in Sources */,
+				98215193277BC9CE0034267D /* ContactsViewController.swift in Sources */,
 				98215173277B51A00034267D /* AppDelegate.swift in Sources */,
 				98215175277B51A00034267D /* SceneDelegate.swift in Sources */,
+				98215195277CA59A0034267D /* mainTabBarViewController.swift in Sources */,
 				98215191277B53C00034267D /* ContactsDetailsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
