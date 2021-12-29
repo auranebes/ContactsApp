@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xeA-Iq-NXO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wF0-5c-6Hf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -8,40 +8,40 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="b4g-7P-PIC">
+            <objects>
+                <navigationController id="wF0-5c-6Hf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wJY-IK-TCD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xeA-Iq-NXO" kind="relationship" relationship="rootViewController" id="kzA-jE-j2G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P7b-VK-uYb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-580" y="133"/>
+        </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="yCH-nT-v8x">
             <objects>
                 <tabBarController id="xeA-Iq-NXO" customClass="mainTabBarViewController" customModule="ContactsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="MKF-wD-5Jy"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AJQ-Ms-lO0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="xOS-KT-aBE" kind="relationship" relationship="viewControllers" id="qmU-ee-KE1"/>
-                        <segue destination="Bcd-4i-YUK" kind="relationship" relationship="viewControllers" id="QfY-J7-mTX"/>
+                        <segue destination="OWh-b6-WmL" kind="relationship" relationship="viewControllers" id="FYL-om-3mm"/>
+                        <segue destination="aWA-Ic-sYm" kind="relationship" relationship="viewControllers" id="XSM-oC-uQn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0YV-0x-Tdw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-595" y="78"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="ZAA-4E-WhP">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bPy-JF-P49" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController restorationIdentifier="ContactsDetails" storyboardIdentifier="ContactsDetails" id="Bcd-4i-YUK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="4ER-kn-apP"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="mTW-AO-xjx">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="aWA-Ic-sYm" kind="relationship" relationship="rootViewController" id="aJ6-tk-cd8"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="459" y="542"/>
+            <point key="canvasLocation" x="325" y="133"/>
         </scene>
         <!--Ежедневник-->
         <scene sceneID="yxy-p9-KYP">
@@ -157,23 +157,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UXa-Dv-8xh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1992.753623188406" y="-160.04464285714286"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="5SB-RT-T2R">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XKn-jX-zct" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController restorationIdentifier="ContactsNavigation" storyboardIdentifier="ContactsNavigation" id="xOS-KT-aBE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="qcT-1q-WxQ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="52l-5U-6I4">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="OWh-b6-WmL" kind="relationship" relationship="rootViewController" id="paG-7s-3IK"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="458" y="-160"/>
         </scene>
     </scenes>
     <resources>

@@ -13,24 +13,17 @@ class mainTabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        sendModel()
     }
     
 }
 
 extension mainTabBarViewController {
-    private func sendModel(for segue: UIStoryboardSegue) {
-        if let tabController = segue.destination as? UITabBarController
-    {
-            tabController.viewControllers?.forEach {
-                
-                if let nav = $0 as? UINavigationController {
-                    if nav.restorationIdentifier == "ContactsNavigation" {
-                        //  let tab = nav.topViewController as! UITableViewController
-                          }
-                }
-            }
+    private func sendModel() {
+        
         }
     }
-}
+
+
+//let personVC = self.tabBarController?.viewControllers![] as! ContactsTableViewController
+//personVC.person = person
