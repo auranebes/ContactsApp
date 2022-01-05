@@ -10,81 +10,50 @@ import UIKit
 
 struct Person {
  
-    let singletone = DataManager.shared
+    let name: String
+    let surname: String
+    let email: String
+    let phoneNumber: String
     
-    
-    func getNames() -> [String] {
-        shuffleRand(for: singletone.names)
-    }
-    
-    func getSurnames() -> [String] {
-        shuffleRand(for: singletone.surnames)
-    }
-    
-    func getEmails() -> [String] {
-        shuffleRand(for: singletone.emails)
-    }
-    
-    func getPhoneNumbers() -> [String] {
-        shuffleRand(for: singletone.phones)
+    var fullName: String {
+        "\(name) \(surname)"
     }
     
 }
 
 extension Person {
     
-    func shuffleRand(for values: [String]) -> [String] {
-        var changedValues = values.shuffled()
-        var shuffledValues: [String] = []
+    static func getContactList() -> [Person] {
         
-        for _ in 0..<changedValues.count {
-            let randomIndex = Int.random(in: 0..<changedValues.count)
-            shuffledValues.append(changedValues[randomIndex])
-            changedValues.remove(at: randomIndex)
+        var persons: [Person] = []
+        
+        let names = DataManager.shared.names.shuffled()
+        let surnames = DataManager.shared.surnames.shuffled()
+        let emails = DataManager.shared.emails.shuffled()
+        let phoneNumbers = DataManager.shared.phones.shuffled()
+        
+        let iterationCount = min(
+                                names.count,
+                                 surnames.count,
+                                 emails.count,
+                                 phoneNumbers.count
+                                )
+        
+        for index in 0..<iterationCount {
+            let person = Person(name: names[index],
+                                surname: surnames[index],
+                                email: emails[index],
+                                phoneNumber: phoneNumbers[index]
+                                )
+            persons.append(person)
         }
-        
-        return shuffledValues
+        return persons
     }
     
-    /*
-    private func randomizer(for values: [String]) -> [String] {
-        let shuffled = values.shuffled()
-        return shuffled
-    }
-     */
     
-    /*
-     private func randomizer3(for values: [String]) -> [String] {
-        var setOfValues = Set<String>()
-        
-        while setOfValues.count < values.count {
-            let indexOfValue = Int(arc4random_uniform(UInt32(values.count)))
-            setOfValues.insert(values[indexOfValue])
-        }
-        let arrayOfValues = Array(setOfValues)
-        
-        return arrayOfValues
-    }
-     */
-    
-   /* func randomizer1(for values: [String]) -> [String] {
-        var arrayOfValues: [String] = []
-        
-        while arrayOfValues.count < values.count {
-            for value in values {
-                let indexOfValue = Int(arc4random_uniform(UInt32(values.count)))
-                let isUnique = arrayOfValues.filter { $0 == value }.count > 0
-                if isUnique == true {
-                    arrayOfValues.removeLast()
-                } else if isUnique == false {
-                    arrayOfValues.append(values[indexOfValue])
-                }
-                
-            }
-        }
-        return arrayOfValues
-    }
-    */
 }
 
-
+enum Contacts: String {
+    case phone = "phone"
+    case email = "tray"
+}

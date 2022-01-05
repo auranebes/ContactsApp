@@ -9,14 +9,15 @@ import UIKit
 
 class ContactsViewController: UIViewController {
     
-    @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet var phoneLabel: UILabel!
+    @IBOutlet var emailLabel: UILabel!
     
-    var person: Person!
+    var persons: Person!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       // phoneLabel.text = person.getPhoneNumbers()
+        phoneLabel.text = "Phone: \(persons.phoneNumber)"
+        emailLabel.text = "E-mail: \(persons.email)"
     }
     
 
